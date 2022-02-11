@@ -1,22 +1,26 @@
 #define _CRT_SECURE_NO_WARNINGS 1
-#include <stdio.h>
-#define MAX 3400
-int main()
+/比较两个数的大小
+#include<stdio.h>
+int Max(int x,int y)
 {
-	int i=0;
-	int j=0;
-	printf("请问你要好好学习了嘛(1,0)>:\n");
-	scanf("%d",&i);
-	if(i==1)
-		{printf("努力背单词吧，3400个基本词汇哦\n");
-		while(j<MAX)
-			{j++;
-			printf("背了%d个单词了\n",j);
-			}
-		printf("恭喜你，成功上岸！！！\n");
+	if (x>y)
+	{
+		return x;	
 	}
 	else
-		printf("没有努力哪来的收获，回家种地吧！！！\n");
-	return 0;
+	{
+		return y;
+	}
 
+}
+int main()
+{
+	int num1=0;
+	int num2=0;
+	int max=0;
+	printf("请输入需要比较大小的两个数>:");
+	scanf("%d%d",&num1,&num2);
+	max=Max(num1,num2);
+	printf("最大值为:%d",max);
+	return 0; 
 }
